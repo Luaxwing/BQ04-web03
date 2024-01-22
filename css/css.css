@@ -109,3 +109,8 @@ div.ww:hover > div.s
 {
 	font-size:12px;
 }
+
+
+button:hover{
+cursor: pointer;
+}
