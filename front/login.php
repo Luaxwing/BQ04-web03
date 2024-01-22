@@ -1,5 +1,5 @@
 <h2>第一次購買</h2>
-<img src="./icon/0413.jpg" onclick="location.href=">
+<img class="btn regBtn" src="./icon/0413.jpg" onclick="location.href='?do=reg'">
 
 <h2>會員登入</h2>
 
@@ -33,3 +33,12 @@
 <div class="ct">
     <button>確認</button>
 </div>
+
+<script>
+    const regBtn=document.getElementsByClassName('regBtn');
+    regBtn.addEventListener("mouseover",function(){
+        this.src="./icon/0413-2.jpg";
+    })
+
+
+</script>

@@ -111,6 +111,6 @@ div.ww:hover > div.s
 }
 
 
-button:hover{
+button,.btn:hover{
 cursor: pointer;
 }
