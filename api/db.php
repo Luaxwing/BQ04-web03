@@ -208,6 +208,7 @@ function pagetabs($now, $pages, $table = "")
 }
 
 
+$Bottom=new DB('bottom');
 
 // if (!isset($_SESSION['visited'])) {
 //     if ($Total->count(['date' => date('Y-m-d')]) > 0) {

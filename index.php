@@ -42,7 +42,7 @@
         <div id="right">
             <?php
             $do = $_GET['do'] ?? 'main';
-            $file = "./front/($do).php";
+            $file = "./front/{$do}.php";
             if (file_exists($file)) {
                 include $file;
             } else {
@@ -51,7 +51,9 @@
             ?>
         </div>
         <div id="bottom" style="line-height:70px;background:url(icon/bot.png); color:#FFF;" class="ct">
-            頁尾版權 : </div>
+            <!-- 頁尾版權 :  -->
+        <?=$Bottom->find(["sh"=>1])['bottom'];?>
+        </div>
     </div>
 
 </body>
