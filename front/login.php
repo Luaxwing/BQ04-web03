@@ -1,5 +1,5 @@
 <h2>第一次購買</h2>
-<img class="btn regBtn" src="./icon/0413.jpg" onclick="location.href='?do=reg'">
+<img class="btn" src="./icon/0413.jpg" onclick="location.href='?do=reg'">
 
 <h2>會員登入</h2>
 
@@ -35,10 +35,12 @@
 </div>
 
 <script>
-    const regBtn=document.getElementsByClassName('regBtn');
-    regBtn.addEventListener("mouseover",function(){
-        this.src="./icon/0413-2.jpg";
-    })
+  $('.btn').mouseover(function () { 
+    $('.btn').attr('src',"./icon/0413-2.jpg")
+    });
+  $('.btn').mouseout(function () { 
+    $('.btn').attr('src',"./icon/0413.jpg")
+    });
 
 
 </script>
