@@ -20,7 +20,7 @@ function login(table) {
 					if (parseInt(res) == 0) {
 						alert("帳號或密碼錯誤，請重新輸入")
 					} else {
-
+// 
 						switch (table) {
 							case 'mem':
 								location.href = "index.php";
@@ -29,7 +29,7 @@ function login(table) {
 								location.href = "back.php?do=admin";
 								break;
 						}
-
+// 
 					}
 				})
 		}
