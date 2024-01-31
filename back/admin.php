@@ -42,7 +42,7 @@ foreach ($rows as $row) {
     <button onclick="location.href='index.php'">返回</button>
 </div>
 
-<script>
+<!-- <script>
     function del(table,id){
         // console.log('table',table);
         // console.log('id',id);
@@ -51,4 +51,4 @@ foreach ($rows as $row) {
         location.reload();
     })
     }
-</script>
+</script> -->
