@@ -78,6 +78,7 @@ function edit(dom,id){
 
         $.post("./api/save_type.php",{name,big_id},()=>{
             location.reload();
+
         })
     }
 </script>

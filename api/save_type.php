@@ -8,7 +8,7 @@ include_once "db.php";
 // $_POST=['name'=name , 'big_id'=big_id] //Note
 // $DB->save($_POST);
 $Type->save($_POST);
-
+// try something
 // echo $_POST['big_id'];
 
 // end
