@@ -34,6 +34,7 @@
     getTypes(0);
     function getTypes(big_id){
         // "路徑",{參數},(回傳值)=>{執行}
+        // 回傳值為"去的php頁面"所echo的值，變數名自訂，與前頁面之變數名"沒有關聯"
         $.get("./api/get_types.php",{big_id},(types)=>{
             $('#bigs').html(types);
         })
