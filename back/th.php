@@ -1,38 +1,59 @@
 <h2 class="ct">商品分類</h2>
 <div class="ct">
-    新增大分類
-     <input type="text" name="big" id="big">
-     <button onclick="addType('big')">新增</button>
+    新增大分類 <input type="text" name="big" id="big"> 
+              <button onclick="addType('big')">新增</button>
 </div>
 <div class="ct">
-    新增中分類
-    <select name="big" id="bigs">
-
-    </select>
+    新增中分類 
+    <select name="big" id="bigs"></select>
     <input type="text" name="mid" id="mid">
     <button onclick="addType('mid')">新增</button>
 </div>
 <!-- table.all>(tr.tt>td+td.ct>button*2)+(tr.tt.ct>td*2) -->
 <table class="all">
+<?php
+$bigs=$Type->all(['big_id'=>0]);
+foreach($bigs as $big){
+?>
     <tr class="tt">
-        <td>流行皮件</td>
+        <td><?=$big['name'];?></td>
         <td class="ct">
-            <button>修改</button>
-            <button>刪除</button>
+            <button onclick="edit(this,<?=$big['id'];?>)">修改</button>
+            <button onclick="del('type',<?=$big['id'];?>)">刪除</button>
         </td>
     </tr>
-    <tr class="pp ct">
-        <td>女用皮件</td>
-        <td>
-            <button>修改</button>
-            <button>刪除</button>
-        </td>
-    </tr>
+<?php
+    $mids=$Type->all(['big_id'=>$big['id']]);
+    foreach($mids as $mid){
+    ?>
+        <tr class="pp ct">
+            <td><?=$mid['name'];?></td>
+            <td>
+                <button onclick="edit(this,<?=$mid['id'];?>)">修改</button>
+                <button onclick="del('type',<?=$mid['id'];?>)">刪除</button>            
+            </td>
+        </tr>    
+    <?php
+    }
+}
+?>    
+
 </table>
 
 <script>
     getTypes(0);
-    function getTypes(big_id){
+
+function edit(dom,id){
+    let name=prompt("請輸入您要修改的分類名稱:",`${$(dom).parent().prev().text()}`);
+    if(name!=null){
+        $.post("./api/save_type.php",{name,id},()=>{
+            $(dom).parent().prev().text(name);
+            // location.reload();
+        })
+    }
+}
+
+    function getTypes(big_id,selected_id){
         // "路徑",{參數},(回傳值)=>{執行}
         // 回傳值為"去的php頁面"所echo的值，變數名自訂，與前頁面之變數名"沒有關聯"
         $.get("./api/get_types.php",{big_id},(types)=>{
