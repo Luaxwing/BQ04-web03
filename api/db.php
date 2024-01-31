@@ -155,16 +155,6 @@ function to($url)
     header("location:$url");
 }
 
-// for get_sessions
-$sess = [
-    1 => '14:00~16:00',
-    2 => '16:00~18:00',
-    3 => '18:00~20:00',
-    4 => '20:00~22:00',
-    5 => '22:00~24:00'
-];
-
-
 
 
 
@@ -207,7 +197,7 @@ function pagetabs($now, $pages, $table = "")
 
 }
 
-
+$Admin=new DB('admin');
 $Bottom=new DB('bottom');
 $Mem=new DB('mem');
 
