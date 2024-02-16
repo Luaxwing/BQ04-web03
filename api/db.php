@@ -197,6 +197,9 @@ function pagetabs($now, $pages, $table = "")
 
 }
 
+
+
+
 $Admin=new DB('admin');
 $Bottom=new DB('bottom');
 $Mem=new DB('mem');
