@@ -62,7 +62,7 @@
         </div>
         <div id="left" class="ct">
             <div style="min-height:400px;">
-                <a>全部商品(<?= $Goods->count(['sh' => 1]); ?>)</a>
+                <a href="?">全部商品(<?= $Goods->count(['sh' => 1]); ?>)</a>
 
                 <?php
                 $bigs = $Type->all(['big_id' => 0]);
