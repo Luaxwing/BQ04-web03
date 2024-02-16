@@ -75,8 +75,8 @@ if (isset($_SESSION['mem'])) {
 
         </table>
         <div class="ct">
-            <img src="./icon/0411.jpg" alt="">
-            <img src="./icon/0412.jpg" alt="">
+            <img src="./icon/0411.jpg" alt="" onclick="history.back()">
+            <img src="./icon/0412.jpg" alt="" onclick="location.href='?do=checkout'">
         </div>
         <?php
     }
@@ -90,6 +90,7 @@ if (isset($_SESSION['mem'])) {
 
             })
         }
+
 
     </script>
 
