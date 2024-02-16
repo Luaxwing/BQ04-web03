@@ -45,3 +45,18 @@ function del(table,id){
 	location.reload();
 })
 }
+
+
+
+
+// 商品上架下架
+// sh-顯示與否
+// id-商品ID
+// 使用-back/th.php
+function sh(sh,id){
+
+$.post("./api/sh.php",{sh,id},()=>{
+	location.reload();
+})
+
+}
