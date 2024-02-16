@@ -79,7 +79,7 @@
                             foreach ($mids as $mid) {
                                 ?>
                                 <div class="s">
-                                    <a href="<?=$mid['id']?>">
+                                    <a href="?type=<?=$mid['id']?>">
                                         <?= $mid['name'] ?>(<?=$Goods->count(['sh'=>1,'mid'=> $mid['id']])?>)
                                     </a>
                                 </div>
