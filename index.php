@@ -13,17 +13,21 @@
     <script src="./js/js.js"></script>
     <!-- <script src="./js/jquery-1.9.1.min.js"></script> -->
     <script src="./js/jquery-3.4.1.min.js"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
-<?php
-if(!isset($_SESSION['mem']) && isset($_GET['do']) && ($_GET['do']=="buycart") ){
-    echo "do";
-    to("?do=login");
+    <?php
+    if (!isset($_SESSION['mem']) && isset($_GET['do']) && ($_GET['do'] == "buycart")) {
+        echo "do";
+        to("?do=login");
 
     }
-?>
+    ?>
     <iframe name="back" style="display:none;"></iframe>
     <div id="main">
         <div id="top">
@@ -70,7 +74,9 @@ if(!isset($_SESSION['mem']) && isset($_GET['do']) && ($_GET['do']=="buycart") ){
         </div>
         <div id="left" class="ct">
             <div style="min-height:400px;">
-                <a href="?">全部商品(<?= $Goods->count(['sh' => 1]); ?>)</a>
+                <a href="?">全部商品(
+                    <?= $Goods->count(['sh' => 1]); ?>)
+                </a>
 
                 <?php
                 $bigs = $Type->all(['big_id' => 0]);
@@ -78,8 +84,8 @@ if(!isset($_SESSION['mem']) && isset($_GET['do']) && ($_GET['do']=="buycart") ){
                 foreach ($bigs as $big) {
                     ?>
                     <div class="ww">
-                        <a href="?type=<?=$big['id']?>">
-                            <?= $big['name'] ?>(<?=$Goods->count(['sh'=>1,'big'=> $big['id']])?>)
+                        <a href="?type=<?= $big['id'] ?>">
+                            <?= $big['name'] ?>(<?= $Goods->count(['sh' => 1, 'big' => $big['id']]) ?>)
                         </a>
                         <?php
                         if ($Type->count(['big_id' => $big['id']]) > 0) {
@@ -87,8 +93,8 @@ if(!isset($_SESSION['mem']) && isset($_GET['do']) && ($_GET['do']=="buycart") ){
                             foreach ($mids as $mid) {
                                 ?>
                                 <div class="s">
-                                    <a href="?type=<?=$mid['id']?>">
-                                        <?= $mid['name'] ?>(<?=$Goods->count(['sh'=>1,'mid'=> $mid['id']])?>)
+                                    <a href="?type=<?= $mid['id'] ?>">
+                                        <?= $mid['name'] ?>(<?= $Goods->count(['sh' => 1, 'mid' => $mid['id']]) ?>)
                                     </a>
                                 </div>
                                 <?php

@@ -44,7 +44,7 @@ $goods=$Goods->find($_GET['id']);
     </a>
  </div>
  <div class="info">
-    <div>分類：<?=$Type->find([''])?></div>
+    <div>分類：<?=$Type->find($goods['big'])['name'];?> > <?=$Type->find($goods['mid'])['name'];?></div>
     <div>編號：<?=$goods['no'];?></div>
     <div>價錢：<?=$goods['price'];?></div>
     <div>詳細說明：<?=$goods['intro'];?>...</div>
@@ -53,6 +53,15 @@ $goods=$Goods->find($_GET['id']);
 </div>
 <div class="tt ct">
     購買數量:
-    <input type="number" value="1" style="width:50px;">
-    <img src="./icon/0402.jpg" alt="">
+    <input type="number" value="1" style="width:50px;" id="qt">
+    <img src="./icon/0402.jpg" alt="" onclick="buy()">
 </div>
+
+
+<script>
+    function buy(){
+        let id=<?=$_GET['id']?>;
+        let qt=$("#qt").val();
+        location.href=`?do=buycart&id=${id}&qt=${qt}`
+        }
+</script>
