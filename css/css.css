@@ -101,6 +101,11 @@ input[type=text],input[type=password]
 {
 	display:none;
 }
+/* +#id 提高權重 */
+#left .s a
+{
+	background-color: rgb(136, 208, 239);
+}
 div.ww:hover > div.s
 {
 	display:block;
