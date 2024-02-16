@@ -70,7 +70,7 @@
                 foreach ($bigs as $big) {
                     ?>
                     <div class="ww">
-                        <a href="">
+                        <a href="?type=<?=$big['id']?>">
                             <?= $big['name'] ?>(<?=$Goods->count(['sh'=>1,'big'=> $big['id']])?>)
                         </a>
                         <?php
@@ -79,7 +79,7 @@
                             foreach ($mids as $mid) {
                                 ?>
                                 <div class="s">
-                                    <a href="">
+                                    <a href="<?=$mid['id']?>">
                                         <?= $mid['name'] ?>(<?=$Goods->count(['sh'=>1,'mid'=> $mid['id']])?>)
                                     </a>
                                 </div>
