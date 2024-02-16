@@ -16,6 +16,14 @@
 </head>
 
 <body>
+
+<?php
+if(!isset($_SESSION['mem']) && isset($_GET['do']) && ($_GET['do']=="buycart") ){
+    echo "do";
+    to("?do=login");
+
+    }
+?>
     <iframe name="back" style="display:none;"></iframe>
     <div id="main">
         <div id="top">

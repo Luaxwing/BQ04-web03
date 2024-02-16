@@ -92,45 +92,45 @@ body {
 }
 
 /* index.php 商品簡介 */
-.item {
-	width: 80%;
-	height: 160px;
-	background: #EFCA85;
-	margin: 5px auto;
-	display: flex;
-}
-
-
-.item .img {
-	width: 33%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border: 1px solid white;
-}
-
-/* .item div{
-	
-	
-} */
-
-.item .info {
-	width: 65%;
-	border: 1px solid white;
-	border-right: 2px solid white;
-}
-
-.info div {
-	border-bottom: 1px solid white;
-}
-
-.info div:nth-child(4) {
-	border-bottom: 0px;
-}
-
-.pname {
-	border-bottom: 1px solid white;
-}
+/* .item { */
+	/* width: 80%; */
+	/* height: 160px; */
+	/* background: #EFCA85; */
+	/* margin: 5px auto; */
+	/* display: flex; */
+/* } */
+/*  */
+/*  */
+/* .item .img { */
+	/* width: 33%; */
+	/* display: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	/* border: 1px solid white; */
+/* } */
+/*  */
+/* /* .item div{ */
+	/*  */
+	/*  */
+/* } */ */
+/*  */
+/* .item .info { */
+	/* width: 65%; */
+	/* border: 1px solid white; */
+	/* border-right: 2px solid white; */
+/* } */
+/*  */
+/* .info div { */
+	/* border-bottom: 1px solid white; */
+/* } */
+/*  */
+/* .info div:nth-child(4) { */
+	/* border-bottom: 0px; */
+/* } */
+/*  */
+/* .pname { */
+	/* border-bottom: 1px solid white; */
+/* } */
 
 /* index.php 商品簡介 END  */
 
