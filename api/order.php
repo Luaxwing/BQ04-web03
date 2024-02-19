@@ -21,6 +21,9 @@ $_POST['acc']=$_SESSION['mem'];
 
 $Orders->save($_POST);
 
+//訂購完後將訂單清除避免重複購買
+unset($_SESSION['cart']);
+
 ?>
 
 <script>
