@@ -133,6 +133,22 @@
         </div>
     </div>
 
+
+<script>
+let orderSuccess="<?=(isset($_GET['order']))?$_GET['order']:""?>";
+
+console.log(orderSuccess);
+
+if(orderSuccess=="success"){
+    alert("訂購成功!\n感謝你的選購");
+    location.href="index.php";
+}
+
+
+</script>
+
+
+
 </body>
 
 </html>

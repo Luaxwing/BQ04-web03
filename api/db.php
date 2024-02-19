@@ -205,6 +205,7 @@ $Bottom=new DB('bottom');
 $Mem=new DB('mem');
 $Type=new DB('type');
 $Goods=new DB('goods');
+$Orders=new DB('orders');
 
 
 // if (!isset($_SESSION['visited'])) {
