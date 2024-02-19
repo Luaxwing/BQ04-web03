@@ -9,7 +9,7 @@
         <th class="tt ct">操作</th>
     </tr>
     <?php
-    $rows=$Order->all();
+    $rows=$Orders->all();
     foreach($rows as $row){
     ?>
     <tr>
